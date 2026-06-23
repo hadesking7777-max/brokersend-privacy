@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Política de Privacidade — Broker Send</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: #f8f9fa;
+      color: #212529;
+      line-height: 1.7;
+    }
+    header {
+      background: linear-gradient(135deg, #1565C0 0%, #0D47A1 100%);
+      color: #fff;
+      padding: 48px 24px 40px;
+      text-align: center;
+    }
+    header h1 { font-size: 2rem; font-weight: 800; letter-spacing: -0.5px; }
+    header p  { margin-top: 8px; opacity: 0.85; font-size: 0.95rem; }
+    main {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 40px 24px 80px;
+    }
+    section { margin-bottom: 40px; }
+    h2 {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: #1565C0;
+      border-left: 4px solid #1565C0;
+      padding-left: 12px;
+      margin-bottom: 14px;
+    }
+    p, li { font-size: 0.97rem; color: #343a40; }
+    ul { padding-left: 22px; }
+    li { margin-bottom: 6px; }
+    .highlight {
+      background: #e3f2fd;
+      border: 1px solid #90caf9;
+      border-radius: 8px;
+      padding: 16px 20px;
+      margin: 16px 0;
+      font-size: 0.93rem;
+    }
+    .highlight strong { color: #1565C0; }
+    a { color: #1565C0; }
+    footer {
+      text-align: center;
+      padding: 32px 24px;
+      background: #e9ecef;
+      font-size: 0.85rem;
+      color: #6c757d;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Broker Send</h1>
+  <p>Política de Privacidade &mdash; Última atualização: 23 de junho de 2026</p>
+</header>
+
+<main>
+
+  <section>
+    <h2>1. Sobre este aplicativo</h2>
+    <p>
+      O <strong>Broker Send</strong> é um aplicativo Android que automatiza o envio de campanhas de mensagens
+      através do WhatsApp instalado no próprio dispositivo do usuário.
+      Esta Política de Privacidade descreve como coletamos, usamos e protegemos as suas informações.
+    </p>
+  </section>
+
+  <section>
+    <h2>2. Informações coletadas</h2>
+    <ul>
+      <li><strong>Conta:</strong> nome de exibição e endereço de e-mail fornecidos no cadastro (via Firebase Authentication).</li>
+      <li><strong>Contatos:</strong> nomes e números de telefone importados pelo usuário para criação de listas de destinatários. Esses dados são armazenados exclusivamente na conta do próprio usuário.</li>
+      <li><strong>Campanhas e modelos:</strong> textos de mensagem, imagens anexadas e configurações de envio criadas pelo usuário.</li>
+      <li><strong>Histórico de envios:</strong> registros dos resultados de cada campanha (enviado, falha, ignorado) com data/hora e destinatário.</li>
+      <li><strong>Dados de uso anônimos:</strong> eventos de uso coletados pelo Firebase Analytics para melhorar o aplicativo (sem identificação pessoal).</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>3. Uso do Serviço de Acessibilidade</h2>
+
+    <div class="highlight">
+      <strong>Por que o Broker Send usa o Serviço de Acessibilidade?</strong><br />
+      O aplicativo opera diretamente pelo WhatsApp instalado no seu dispositivo.
+      Para automatizar o processo de envio, o Serviço de Acessibilidade é utilizado para
+      <strong>interagir com a interface do WhatsApp</strong> — abrindo conversas, selecionando destinatários
+      e tocando no botão "Enviar" — exatamente como você faria manualmente.
+    </div>
+
+    <p><strong>O Serviço de Acessibilidade do Broker Send:</strong></p>
+    <ul>
+      <li>Lê o conteúdo da tela do WhatsApp <em>somente durante uma campanha ativa</em>, para navegar pelos menus e confirmar que a mensagem foi enviada.</li>
+      <li>Executa toques e ações na interface do WhatsApp em seu nome.</li>
+      <li>É desativado automaticamente quando nenhuma campanha está em execução.</li>
+    </ul>
+
+    <p style="margin-top:14px;"><strong>O Serviço de Acessibilidade NÃO:</strong></p>
+    <ul>
+      <li>Lê, armazena ou transmite conversas privadas do WhatsApp.</li>
+      <li>Acessa mensagens recebidas de outros contatos.</li>
+      <li>Opera em outros aplicativos além do WhatsApp e WhatsApp Business.</li>
+      <li>Coleta dados sem o conhecimento ou ação explícita do usuário.</li>
+    </ul>
+
+    <p style="margin-top:14px;">
+      Os dados acessados pelo Serviço de Acessibilidade <strong>não são compartilhados</strong> com o desenvolvedor
+      nem com terceiros. Eles são utilizados exclusivamente para executar as ações de envio no dispositivo local.
+    </p>
+  </section>
+
+  <section>
+    <h2>4. Como usamos as informações</h2>
+    <ul>
+      <li>Permitir que você crie, gerencie e execute campanhas de mensagens.</li>
+      <li>Exibir relatórios de envio na tela de histórico do aplicativo.</li>
+      <li>Gerenciar sua assinatura e período de teste.</li>
+      <li>Melhorar a experiência do aplicativo com base em dados de uso anônimos.</li>
+    </ul>
+    <p style="margin-top:10px;">
+      Não utilizamos suas informações para fins publicitários, não vendemos dados a terceiros
+      e não criamos perfis de comportamento.
+    </p>
+  </section>
+
+  <section>
+    <h2>5. Armazenamento e segurança</h2>
+    <p>
+      Os dados são armazenados no <strong>Firebase Firestore</strong> (Google Cloud), com acesso restrito
+      à conta autenticada do usuário. A comunicação entre o aplicativo e os servidores é sempre
+      criptografada via HTTPS/TLS.
+    </p>
+    <p style="margin-top:10px;">
+      Imagens e mídias utilizadas nas campanhas são acessadas diretamente do armazenamento local do
+      dispositivo e não são enviadas para servidores externos.
+    </p>
+  </section>
+
+  <section>
+    <h2>6. Assinaturas e pagamentos</h2>
+    <p>
+      O Broker Send oferece um período de teste de 48 horas seguido de uma assinatura mensal (R$&nbsp;10,00/mês).
+      Todos os pagamentos são processados pelo <strong>Google Play Billing</strong>.
+      O desenvolvedor não tem acesso a dados de cartão de crédito ou informações bancárias.
+    </p>
+  </section>
+
+  <section>
+    <h2>7. Compartilhamento de dados</h2>
+    <p>Seus dados são compartilhados apenas com os seguintes provedores de infraestrutura, necessários para o funcionamento do aplicativo:</p>
+    <ul>
+      <li><strong>Google Firebase</strong> (autenticação, banco de dados, analytics) — <a href="https://policies.google.com/privacy" target="_blank">Política de Privacidade do Google</a></li>
+      <li><strong>Google Play Billing</strong> (assinaturas)</li>
+    </ul>
+    <p style="margin-top:10px;">Não compartilhamos dados com anunciantes, corretoras de dados ou quaisquer outros terceiros.</p>
+  </section>
+
+  <section>
+    <h2>8. Retenção de dados</h2>
+    <p>
+      Seus dados são mantidos enquanto sua conta estiver ativa. Ao solicitar a exclusão da conta,
+      todos os dados pessoais, contatos, campanhas e histórico de envios serão removidos dos nossos
+      servidores em até 30 dias.
+    </p>
+  </section>
+
+  <section>
+    <h2>9. Seus direitos</h2>
+    <ul>
+      <li>Acessar os dados que armazenamos sobre você.</li>
+      <li>Corrigir informações incorretas.</li>
+      <li>Solicitar a exclusão de sua conta e todos os dados associados.</li>
+      <li>Exportar seus dados de contatos e campanhas.</li>
+    </ul>
+    <p style="margin-top:10px;">Para exercer qualquer um desses direitos, entre em contato pelo e-mail abaixo.</p>
+  </section>
+
+  <section>
+    <h2>10. Crianças</h2>
+    <p>
+      O Broker Send é destinado exclusivamente a usuários com 18 anos ou mais.
+      Não coletamos intencionalmente dados de menores de idade.
+    </p>
+  </section>
+
+  <section>
+    <h2>11. Alterações nesta política</h2>
+    <p>
+      Podemos atualizar esta Política de Privacidade periodicamente.
+      Quando isso ocorrer, atualizaremos a data no topo desta página e, se as alterações forem
+      significativas, notificaremos você pelo aplicativo.
+    </p>
+  </section>
+
+  <section>
+    <h2>12. Contato</h2>
+    <p>Em caso de dúvidas ou solicitações relacionadas à sua privacidade, entre em contato:</p>
+    <p style="margin-top:10px;">
+      <strong>E-mail:</strong> <a href="mailto:grupodhimoveis@gmail.com">grupodhimoveis@gmail.com</a><br />
+      <strong>Desenvolvedor:</strong> Uiter Cledson Conceição da Hora
+    </p>
+  </section>
+
+</main>
+
+<footer>
+  &copy; 2026 Broker Send. Todos os direitos reservados.
+</footer>
+
+</body>
+</html>
